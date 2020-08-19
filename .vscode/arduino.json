@@ -1,0 +1,6 @@
+{
+    "board": "arduino:avr:nano",
+    "sketch": "LED_Master Code/The_Veldt.ino",
+    "port": "COM3",
+    "configuration": "cpu=atmega328"
+}
