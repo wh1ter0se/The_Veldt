@@ -57,7 +57,7 @@ void setup() {
     pinMode(SKYHALO_LED_PIN, OUTPUT);
 
     // Set display mode
-    displayMode = 1;
+    displayMode = 2;
 
     Serial.begin(19200);
 }
@@ -79,7 +79,7 @@ void loop() {
       FastLED.show();
       break;
     case 1: // Displays a synced/offset solidRainbow across everything
-      defaultOffset = 20;
+      defaultOffset = 0;
       defaultBrightness = 200;
       tripleArc_SolidRainbow(defaultOffset, defaultBrightness);
       //backsplash_SolidRainbow(defaultOffset, defaultBrightness);
@@ -92,7 +92,7 @@ void loop() {
       break;
     case 2: // Displays a rainbow across everything
       currentPalette  = RainbowColors_p;
-      defaultSkew = 3;
+      defaultSkew = 2.5;
       defaultBrightness = 255;
       defaultSinVal = 10;
       backsplash_PaletteFade(defaultSkew, defaultBrightness, defaultSinVal);
@@ -105,10 +105,10 @@ void loop() {
     case 3: // Night light to alarm clock 
       FastLED.clear();
       FastLED.show();
-      //defaultColor = 95;
-      //defaultBrightness = 8;
+      defaultColor = 95;
+      defaultBrightness = 16;
       //desk_PaletteColor(defaultColor,0);
-      //bed_PaletteColor(defaultColor,defaultBrightness);
+      bed_PaletteColor(defaultColor,defaultBrightness);
       alarmClock(300);
       displayMode = 1;
       break;

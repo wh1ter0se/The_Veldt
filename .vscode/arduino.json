@@ -1,6 +1,6 @@
 {
     "board": "arduino:avr:nano",
-    "sketch": "LED_Master Code\\V2-0\\TheVeldt_2-0.ino",
+    "sketch": "LED_Master Code\\MSGEQ7\\MSGEQ7_Test.ino",
     "port": "COM3",
     "configuration": "cpu=atmega328",
     "programmer": "AVRISP mkII"
